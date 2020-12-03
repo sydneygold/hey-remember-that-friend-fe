@@ -1,9 +1,10 @@
 import {useState} from 'react'
 import EditForm from './EditForm'
 
-export default function FriendCard({friend, updateFriend}) {
+export default function FriendCard({friend, updateFriend, deleteFriend}) {
 
     const [hovered, isHovered] = useState(false)
+    const [deleteHover, setDeleteHover] = useState(false)
     const [clicked, isClicked] = useState(false)
 
     const handleMouseEnter = (event) => {
@@ -24,12 +25,32 @@ export default function FriendCard({friend, updateFriend}) {
         isClicked(!clicked)
     }
 
+    const deleteMessageIn = (event) => {
+        setDeleteHover(true)
+    }
+    const deleteMessageOut = (event) => {
+        setDeleteHover(false)
+    }
+
+    const deleteMeNotification = () => {
+        return deleteHover === true
+        ? <p className="edit-notification">Delete me!</p>
+        : null
+    }
+    
+    const handleDelete = (event) => {
+        deleteFriend(friend)
+    }
+
     const toggleForm = (event) => {
         if(clicked === true){
             return <EditForm 
                 friend={friend} 
                 updateFriend={updateFriend}
                 handleClick={toggleClick}
+                clicked={clicked}
+                isClicked={isClicked}
+                toggleForm={toggleForm}
             />
         }
         else {
@@ -69,6 +90,16 @@ export default function FriendCard({friend, updateFriend}) {
                         <br/>
                         {friend.memos}
                     </p>
+                    <div className="delete">
+                        <img src="https://www.onlygfx.com/wp-content/uploads/2018/10/6-watercolor-x-brush-stroke-4.png"
+                            alt="blue x"
+                            className="delete-button"
+                            onMouseEnter={deleteMessageIn}
+                            onMouseLeave={deleteMessageOut}
+                            onClick={handleDelete}
+                        />
+                        {deleteMeNotification()}
+                    </div>
                 </section>
             )
         }

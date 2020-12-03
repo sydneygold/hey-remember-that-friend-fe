@@ -1,10 +1,11 @@
 .App {
   display: flex;
   text-align: center;
+  min-height: 50em;
   font-family: 'Quicksand', sans-serif;
   background: rgb(255,255,255);
+  color: rgb(9, 24, 16);
   background-image: linear-gradient(180deg, rgba(255,255,255,.3) 0%, rgba(237,237,237,.3) 100%), url('https://www.muralswallpaper.co.uk/app/uploads/mint-geometric-design%EF%BB%BF-plain-2.jpg');
-  background-size: cover;
 }
 
 .header {
@@ -14,10 +15,25 @@
 }
 
 .intro {
-  width: 500px;
+  width: 14em;
   line-height: 2em;
   text-align: left;
   margin-left: 24px;
+}
+
+.create-button {
+  width: 19em;
+  height: 2em;
+  margin-top: 3em;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 12px 12px 12px 12px;
+  background-color: rgb(212,233,234);
+  transition: background-color .3s ease-in;
+}
+
+.create-button:hover {
+  background-color: rgb(255, 253, 151);
+  transition: background-color .3s ease-out;
 }
 
 .headline {
@@ -28,11 +44,40 @@
 
 .edit-button {
   width: 30px;
-  
+  transition: transform .2s ease-in;
+}
+
+.edit-button:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+  transition: transform .2s ease-out;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.submit-button {
+  background-color: rgb(199,227,212);
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 8%;
+  transition: background-color .2s ease-in;
+}
+
+.submit-button:hover {
+  background-color: rgb(255, 253, 151);
+  transition: background-color .2s ease-out;
 }
 
 .back-button {
   width: 25px;
+  transition: transform .2s ease-in;
+}
+
+.back-button:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+  transition: transform .2s ease-out;
 }
 
 .name {
@@ -43,12 +88,26 @@
   height: 1px;
   width: 18em;
   margin-top: 4px;
-  background-color: rgba(14, 13, 19, 0.3);
+  background-color: rgb(199,227,212);
 }
 
 .bold-this {
   font-weight: 900;
   white-space: break-spaces;
+}
+
+.delete {
+
+}
+
+.delete-button {
+  width: 30px;
+  transition: transform .2s ease-in;
+}
+
+.delete-button:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+  transition: transform .2s ease-out;
 }
 
 .friend-box {
@@ -91,10 +150,52 @@
   display: flex;
   margin: 10px;
   margin-bottom: 20px;
-  width: 245px;
+  width: 20em;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.create-form-container{
+  width: 52em;
+  margin: 4em;
+}
+
+.create-form {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  line-height: 5em;
+  flex-flow: column wrap;
+  padding: 63px;
+  padding-top: 19px;
+  margin: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
+}
+
+.form-title {
+  text-align: center;
+}
+
+.submit {
+  width: 9em;
+  background-color: rgb(199,227,212);
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 8%;
+  transition: background-color .2s ease-in;
+}
+
+.submit:hover {
+  background-color: rgb(255, 253, 151);
+  transition: background-color .2s ease-out;
+}
+.memo {
+  display: flex;
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 50em;
 }
