@@ -1,20 +1,53 @@
 .App {
+  display: flex;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  background: rgb(255,255,255);
+  background-image: linear-gradient(180deg, rgba(255,255,255,.3) 0%, rgba(237,237,237,.3) 100%), url('https://www.muralswallpaper.co.uk/app/uploads/mint-geometric-design%EF%BB%BF-plain-2.jpg');
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.intro {
+  width: 500px;
+  line-height: 2em;
+  text-align: left;
+  margin-left: 24px;
 }
 
 .headline {
-  font-weight: 100;
+  display: flex;
   margin: 48px;
-  margin-bottom: 48px;
+  font-weight: 100;
+}
+
+.edit-button {
+  width: 30px;
+  
+}
+
+.back-button {
+  width: 25px;
 }
 
 .name {
-  font-weight: 400;
+  font-weight: 100;
+}
+
+.design-line {
+  height: 1px;
+  width: 18em;
+  margin-top: 4px;
+  background-color: rgba(14, 13, 19, 0.3);
 }
 
 .bold-this {
-  font-weight: 500;
+  font-weight: 900;
   white-space: break-spaces;
 }
 
@@ -32,5 +65,36 @@
   padding: 24px;
   padding-top: 40px;
   margin: 24px;
-  box-shadow: 8px 10px 19px 4px rgba(113,105,105,0.37);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
+}
+
+.form {
+  width: 300px;
+  height: 350px;
+  text-align: left;
+  padding: 24px;
+  padding-top: 40px;
+  margin: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
+}
+
+.inputs {
+  display: flex;
+  margin: 10px;
+}
+
+.input-memo {
+  display: flex;
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 245px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
