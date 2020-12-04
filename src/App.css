@@ -1,24 +1,40 @@
 .App {
   display: flex;
-  text-align: center;
+  justify-content: space-around;
   min-height: 50em;
   font-family: 'Quicksand', sans-serif;
-  background: rgb(255,255,255);
   color: rgb(9, 24, 16);
+  text-align: center;
+  background: rgb(255,255,255);
   background-image: linear-gradient(180deg, rgba(255,255,255,.3) 0%, rgba(237,237,237,.3) 100%), url('https://www.muralswallpaper.co.uk/app/uploads/mint-geometric-design%EF%BB%BF-plain-2.jpg');
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.intro {
-  width: 14em;
+.side-banner {
+  width: 16em;
   line-height: 2em;
   text-align: left;
   margin-left: 24px;
+}
+
+.title {
+  display: flex;
+  margin: 48px;
+  font-weight: 100;
+}
+
+.signup-button {
+  width: 6em;
+  height: 2em;
+  margin-top: 3em;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 12px 12px 12px 12px;
+  background-color: rgb(212,233,234);
+  transition: background-color .3s ease-in;
+}
+
+.signup-button:hover {
+  background-color: rgb(255, 253, 151);
+  transition: background-color .3s ease-out;
 }
 
 .create-button {
@@ -36,20 +52,76 @@
   transition: background-color .3s ease-out;
 }
 
-.headline {
+.friend-box {
   display: flex;
-  margin: 48px;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: 75%;
+}
+
+.friend-card {
+  width: 300px;
+  height: 350px;
+  text-align: left;
+  padding: 24px;
+  padding-top: 40px;
+  margin: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
+}
+
+.friend-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
   font-weight: 100;
 }
 
+.design-line {
+  height: 1px;
+  width: 18em;
+  margin-top: 4px;
+  background-color: rgb(199,227,212);
+}
+
 .edit-button {
-  width: 30px;
+  height: 3em;
   transition: transform .2s ease-in;
 }
 
 .edit-button:hover {
   transform: scale3d(1.5, 1.5, 1.5);
   transition: transform .2s ease-out;
+}
+
+.delete-button {
+  width: 30px;
+  transition: transform .2s ease-in;
+}
+
+.delete-button:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+  transition: transform .2s ease-out;
+}
+
+.bold-this {
+  font-weight: 900;
+  white-space: break-spaces;
+}
+
+.form {
+  width: 300px;
+  height: 350px;
+  text-align: left;
+  padding: 24px;
+  padding-top: 40px;
+  margin: 24px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
 }
 
 .button-group {
@@ -80,66 +152,6 @@
   transition: transform .2s ease-out;
 }
 
-.name {
-  font-weight: 100;
-}
-
-.design-line {
-  height: 1px;
-  width: 18em;
-  margin-top: 4px;
-  background-color: rgb(199,227,212);
-}
-
-.bold-this {
-  font-weight: 900;
-  white-space: break-spaces;
-}
-
-.delete {
-
-}
-
-.delete-button {
-  width: 30px;
-  transition: transform .2s ease-in;
-}
-
-.delete-button:hover {
-  transform: scale3d(1.5, 1.5, 1.5);
-  transition: transform .2s ease-out;
-}
-
-.friend-box {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  
-}
-
-.friend-card {
-  width: 300px;
-  height: 350px;
-  text-align: left;
-  padding: 24px;
-  padding-top: 40px;
-  margin: 24px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5%;
-  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
-}
-
-.form {
-  width: 300px;
-  height: 350px;
-  text-align: left;
-  padding: 24px;
-  padding-top: 40px;
-  margin: 24px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5%;
-  box-shadow: 8px 10px 19px 4px rgba(103, 142, 145, 0.37);
-}
 
 .inputs {
   display: flex;
@@ -151,11 +163,6 @@
   margin: 10px;
   margin-bottom: 20px;
   width: 20em;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
 }
 
 .create-form-container{
@@ -181,6 +188,13 @@
   text-align: center;
 }
 
+.memo-for-create-form {
+  display: flex;
+  margin: 10px;
+  margin-bottom: 20px;
+  width: 50em;
+}
+
 .submit {
   width: 9em;
   background-color: rgb(199,227,212);
@@ -192,10 +206,4 @@
 .submit:hover {
   background-color: rgb(255, 253, 151);
   transition: background-color .2s ease-out;
-}
-.memo {
-  display: flex;
-  margin: 10px;
-  margin-bottom: 20px;
-  width: 50em;
 }

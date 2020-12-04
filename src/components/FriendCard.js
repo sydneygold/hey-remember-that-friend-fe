@@ -1,72 +1,74 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import EditForm from './EditForm'
 
-export default function FriendCard({friend, updateFriend, deleteFriend}) {
+export default function FriendCard({ friend, updateFriend, deleteFriend }) {
 
-    const [hovered, isHovered] = useState(false)
-    const [deleteHover, setDeleteHover] = useState(false)
+    const [editHovered, setEditHovered] = useState(false)
+    const [deleteHovered, setDeleteHovered] = useState(false)
     const [clicked, isClicked] = useState(false)
-
-    const handleMouseEnter = (event) => {
-        isHovered(true)
-    }
-    
-    const handleMouseLeave = (event) => {
-        isHovered(false)
-    }
-
-    const editMeNotification = () => {
-        return hovered === true
-        ? <p className="edit-notification">Edit me!</p>
-        : null
-    }
 
     const toggleClick = (event) => {
         isClicked(!clicked)
     }
 
+    const handleEditMouseEnter = (event) => {
+        setEditHovered(true)
+    }
+    
+    const handleEditMouseLeave = (event) => {
+        setEditHovered(false)
+    }
+
+    const editMeNotification = () => {
+        return editHovered === true
+        ? <p>Edit me!</p>
+        : null
+    }
+
     const deleteMessageIn = (event) => {
-        setDeleteHover(true)
+        setDeleteHovered(true)
     }
     const deleteMessageOut = (event) => {
-        setDeleteHover(false)
+        setDeleteHovered(false)
     }
 
     const deleteMeNotification = () => {
-        return deleteHover === true
-        ? <p className="edit-notification">Delete me!</p>
+        return deleteHovered === true
+        ? <p>Delete me!</p>
         : null
     }
     
     const handleDelete = (event) => {
-        deleteFriend(friend)
+        const isConfirmed = window.confirm("Are you sure you want to delete this?")
+        if (isConfirmed) { deleteFriend(friend) }
     }
 
     const toggleForm = (event) => {
         if(clicked === true){
             return <EditForm 
-                friend={friend} 
-                updateFriend={updateFriend}
-                handleClick={toggleClick}
-                clicked={clicked}
-                isClicked={isClicked}
-                toggleForm={toggleForm}
+                friend={ friend } 
+                updateFriend={ updateFriend }
+                handleClick={ toggleClick }
+                clicked={ clicked }
+                isClicked={ isClicked }
+                toggleForm={ toggleForm }
             />
         }
         else {
             return (
                 <section className="friend-card">
-                    <div className="header">
+                    <div className="friend-card-header">
                         <h2 className="name">
-                            {friend.name}
+                            { friend.name }
                         </h2>
-                        {editMeNotification()}
+                        { editMeNotification() }
                         <img 
                         className="edit-button" 
-                        src="http://pngimg.com/uploads/star/star_PNG41462.png" alt="star"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        onClick={toggleClick}
+                        src="http://pngimg.com/uploads/star/star_PNG41462.png" 
+                        alt="star"
+                        onMouseEnter={ handleEditMouseEnter }
+                        onMouseLeave={ handleEditMouseLeave }
+                        onClick={ toggleClick }
                     />
                     
                     </div>
@@ -75,30 +77,30 @@ export default function FriendCard({friend, updateFriend, deleteFriend}) {
                         <span className="bold-this">
                             Birthday  -
                         </span>
-                        {friend.birthday}
+                        { friend.birthday }
                     </p>
                     <p>
                         <span className="bold-this">
                             Zodiac  -
                         </span>
-                        {friend.zodiac}
+                        { friend.zodiac }
                     </p>
                     <p>
                         <span className="bold-this">
                             Life goings  -
                         </span>
                         <br/>
-                        {friend.memos}
+                        { friend.memos }
                     </p>
-                    <div className="delete">
+                    <div className="delete-input">
                         <img src="https://www.onlygfx.com/wp-content/uploads/2018/10/6-watercolor-x-brush-stroke-4.png"
                             alt="blue x"
                             className="delete-button"
-                            onMouseEnter={deleteMessageIn}
-                            onMouseLeave={deleteMessageOut}
-                            onClick={handleDelete}
+                            onMouseEnter={ deleteMessageIn }
+                            onMouseLeave={ deleteMessageOut }
+                            onClick={ handleDelete }
                         />
-                        {deleteMeNotification()}
+                        { deleteMeNotification() }
                     </div>
                 </section>
             )
@@ -108,7 +110,7 @@ export default function FriendCard({friend, updateFriend, deleteFriend}) {
     
     return (
         <div>
-            {toggleForm()}
+            { toggleForm() }
         </div>
     )
 }

@@ -1,14 +1,18 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
-export default function CreateForm({addFriend, setClicked, toggleCreateForm}) {
+export default function CreateForm({ addFriend, setClicked, toggleCreateForm }) {
 
     const [name, setName] = useState("")
     const [birthday, setBirthday] = useState("")
     const [zodiac, setZodiac] = useState("")
     const [memos, setMemos] = useState("")
 
+    const handleClick = () => {
+        setClicked(false)
+    }
+
     const handleSubmit = (event) => {
-        const friend = {name, birthday, zodiac, memos}
+        const friend = { name, birthday, zodiac, memos }
         event.preventDefault()
         addFriend(friend)
         handleClick()
@@ -31,23 +35,41 @@ export default function CreateForm({addFriend, setClicked, toggleCreateForm}) {
         setMemos(event.target.value)
     }
 
-    const handleClick = () => {
-        setClicked(false)
-    }
 
     return (
         <section className="create-form-container">
-        <form className="create-form" onSubmit={handleSubmit}>
+        <form className="create-form" onSubmit={ handleSubmit }>
             <h2 className="form-title">Add a Friend!</h2>
                 <label>Name:</label>
-                <input name={name} value={name} onChange={addName}/>
+                <input 
+                    name={ name } 
+                    value={ name } 
+                    onChange={ addName }
+                />
                 <label>Birthday:</label>
-                <input name={birthday} value={birthday} onChange={addBirthday}/>
+                <input 
+                    name={ birthday } 
+                    value={ birthday }
+                    onChange={ addBirthday }
+                />
                 <label>Zodiac:</label>
-                <input  name={zodiac} value={zodiac} onChange={addZodiac}/>
+                <input  
+                    name={ zodiac } 
+                    value={ zodiac } 
+                    onChange={ addZodiac }
+                />
                 <label>Memos:</label>
-                <input  className="memo" name={memos} value={memos} onChange={addMemo}/>
-                <input type="submit" className="submit" name="Submit"/>
+                <input  
+                    className="memo-for-create-form" 
+                    name={ memos } 
+                    value={ memos } 
+                    onChange={ addMemo }
+                />
+                <input 
+                    type="submit" 
+                    className="submit" 
+                    name="Submit"
+                />
             </form>
         </section>
     )
