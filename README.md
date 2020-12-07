@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./public/Screen Shot.png" alt="Logo" />
+<img src="./public/Screen Shot.png" alt="Screenshot" width="100" height="65" />
 
 `sydneygold`, `hey-remember-that-friend-be`, `sydney.goldberg@outlook.com`, `project_description`
 
