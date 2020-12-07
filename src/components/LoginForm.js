@@ -1,10 +1,13 @@
 import { useState } from 'react'
-const baseUrl = 'http://localhost:3000/users/'
 
-export default function SignUpForm({signUp, alerts}) {
-
+export default function LoginForm({login}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        login(username, password)
+    }
 
     const handleChange = ({target}) => {
         target.name === "username" 
@@ -12,19 +15,10 @@ export default function SignUpForm({signUp, alerts}) {
         : setPassword(target.value)
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        let user = {
-            username, 
-            password
-        }
-        signUp(user)
-    }
-
     return (
         <div>
             <form className="signup-form" onSubmit={handleSubmit}>
-                <h2 className="signup-title">Signup</h2>
+                <h2 className="signup-title">Login</h2>
                 <label className="auth-labels">Username:</label>
                 <input 
                     className="auth-inputs" 
