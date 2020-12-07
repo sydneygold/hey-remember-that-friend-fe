@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./Screen_Shot.png" alt="Screenshot" />
+<img src="./screenshot.png" alt="Screenshot" />
 
 `sydneygold`, `hey-remember-that-friend-be`, `sydney.goldberg@outlook.com`, `project_description`
 
