@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="http://pngimg.com/uploads/star/star_PNG41462.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Hey, Remember That Friend?</h3>
@@ -11,10 +11,9 @@
   <p align="center">
     Hey remember that friend? That person you really get along with but haven't talked to in five months? Don't you hate losing connection with great people? Well now you can keep up with friends easier with this app! Here you can make an account and create friend cards with any information you need to keep up with. Your friend has an interview next monday? Write that in so you can remember to check in with them tuesday!
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Under Construction...»</strong></a>
+    <a href="https://github.com/sydneygold/hey-remember-that-friend-be"><strong>Frontend Repo»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">Under Construction...</a>
     ·
     <a href="https://github.com/sydneygold/issues">Report Bug</a>
     ·
@@ -53,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="./public/Screen Shot.png" alt="Logo" />
 
 `sydneygold`, `hey-remember-that-friend-be`, `sydney.goldberg@outlook.com`, `project_description`
 
