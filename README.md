@@ -11,7 +11,7 @@
   <p align="center">
     Hey remember that friend? That person you really get along with but haven't talked to in five months? Don't you hate losing connection with great people? Well now you can keep up with friends easier with this app! Here you can make an account and create friend cards with any information you need to keep up with. Your friend has an interview next monday? Write that in so you can remember to check in with them tuesday!
     <br />
-    <a href="https://github.com/sydneygold/hey-remember-that-friend-be"><strong>Frontend Repo»</strong></a>
+    <a href="https://github.com/sydneygold/hey-remember-that-friend-be"><strong>Backend Repo»</strong></a>
     <br />
     <br />
     ·
@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="/public/Screen Shot.png" alt="Screenshot" width="100" height="65" />
+<img src="./Screen_Shot.png" alt="Screenshot" />
 
 `sydneygold`, `hey-remember-that-friend-be`, `sydney.goldberg@outlook.com`, `project_description`
 
