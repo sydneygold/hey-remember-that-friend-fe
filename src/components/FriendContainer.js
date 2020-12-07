@@ -1,6 +1,5 @@
 import CreateForm from './CreateForm'
 import FriendCard from './FriendCard'
-import SignUpForm from './SignUpForm'
 
 export default function FriendContainer({ 
     friends, 
@@ -9,8 +8,6 @@ export default function FriendContainer({
     setClicked, 
     addFriend, 
     deleteFriend, 
-    signUpClicked, 
-    setSignUpClicked 
     }) {
 
     const toggleCreateForm = () => {
@@ -20,16 +17,6 @@ export default function FriendContainer({
                 clicked={ clicked }
                 setClicked={ setClicked }
                 toggleCreateForm={ toggleCreateForm }
-            />
-        }
-        else {
-            return listFriends()
-        }
-    }
-
-    const toggleSignUpForm = () => {
-        if(signUpClicked === true){
-            return <SignUpForm
             />
         }
         else {
@@ -51,7 +38,7 @@ export default function FriendContainer({
 
     return (
         <section className="friend-box">
-            { clicked ? toggleCreateForm() : toggleSignUpForm() }
+            {toggleCreateForm()}
         </section>
     )
 }
