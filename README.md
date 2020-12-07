@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./Screen_Shot.png" alt="Screenshot" />
+<img src="https://twitter.com/SydneyGoldber15/status/1336058915604164608/photo/1" alt="Screenshot" />
 
 `sydneygold`, `hey-remember-that-friend-be`, `sydney.goldberg@outlook.com`, `project_description`
 
